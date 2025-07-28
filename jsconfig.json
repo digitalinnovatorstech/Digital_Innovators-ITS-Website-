@@ -1,7 +1,9 @@
+// jsconfig.json (or tsconfig.json if using TypeScript)
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["*"]
     }
   }
 }
