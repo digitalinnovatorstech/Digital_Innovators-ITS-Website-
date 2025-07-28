@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import '@/app/technologies/styles/technologies.css'
+import '../../technologies/styles/technologies.css';
 export default function MobileTechnologies() {
   const andriod = [
     "Kotlin",

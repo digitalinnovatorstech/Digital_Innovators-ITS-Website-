@@ -1,10 +1,10 @@
 import "./globals.css";
-import Header from "@/components/header/header";
+import Header from "../components/header/header";
 import { Providers } from "./providers";
 import { Poppins } from "next/font/google";
-import Footer from "@/components/footer/footer";
-import ReactQueryProvider from "@/wrapper/queryClientWrapper";
-import { ToastContainer } from "@/services/toastmessage";
+import Footer from "../components/footer/footer";
+import ReactQueryProvider from "../wrapper/queryClientWrapper";
+import { ToastContainer } from "../services/toastmessage";
 const poppins = Poppins({
   subsets: [ "latin" ],
   weight: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ],

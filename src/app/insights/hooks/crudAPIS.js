@@ -1,5 +1,5 @@
-import instance from "@/services/axiosinstance";
-import { showToast } from "@/services/toastmessage";
+import instance from "../../../services/axiosinstance";
+import { showToast } from "../../../services/toastmessage";
 import { useQuery } from "@tanstack/react-query";
 
 export function useGetBlogs(categoryId = null, type = null, page = 1, limit = 10, searchQuery = "") {

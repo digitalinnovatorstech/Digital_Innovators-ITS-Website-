@@ -1,5 +1,5 @@
 "use client";
-import PrimaryButton from "@/components/common/primarybutton";
+import PrimaryButton from "../../components/common/primarybutton";
 import { useElementSize } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";

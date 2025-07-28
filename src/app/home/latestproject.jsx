@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Leftarrow from "../../../public/assets/orangebuttonleft.svg";
 import Rightarrow from "../../../public/assets/orangebutton.svg";
-import PrimaryButton from "@/components/common/primarybutton";
+import PrimaryButton from "../../components/common/primarybutton";
 
 
 const LatestProjects = () => {

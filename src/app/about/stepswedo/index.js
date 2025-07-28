@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import Flowerpot from "../../../../public/assets/about/flowerpot.svg";
 import Image from "next/image";
-import '@/app/about/styles/about.css';
+import '../styles/about.css';
 import "../styles/stepwedo.css"
 import StepsImage from "../../../../public/assets/about/stepimage.svg";
 import StepsImage1 from "../../../../public/assets/about/steponeimage.svg";

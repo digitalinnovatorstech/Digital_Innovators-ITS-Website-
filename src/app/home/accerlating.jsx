@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Image1 from "../../../public/assets/home/handimage.svg";
-import PrimaryButton from "@/components/common/primarybutton";
+import PrimaryButton from "../../components/common/primarybutton";
 import "../home/styles/accerlating.css"
 
 const Accelerating = () => {

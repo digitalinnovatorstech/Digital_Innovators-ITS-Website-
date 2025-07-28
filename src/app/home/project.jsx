@@ -6,7 +6,7 @@ import Image1 from "../../../public/assets/home/project/image1.svg";
 import Image2 from "../../../public/assets/home/project/image2.svg";
 import Image3 from "../../../public/assets/home/project/image3.svg";
 import Image4 from "../../../public/assets/home/project/image4.svg";
-import PrimaryButton from "@/components/common/primarybutton";
+import PrimaryButton from "../../components/common/primarybutton";
 import Link from "next/link";
 
 const VerticalScrollImages = () => {

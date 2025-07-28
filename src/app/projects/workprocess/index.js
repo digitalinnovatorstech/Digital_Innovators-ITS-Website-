@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Chat from "../../../../public/assets/projects/chat.svg";
 import DesignandDev from "../../../../public/assets/projects/design&dev.svg";
-import "@/app/projects/styles/projects.css";
+import "../../projects/styles/projects.css";
 import Questionnaire from "../../../../public/assets/projects/questionnaire.svg";
 import Strategy from "../../../../public/assets/projects/statergy.svg";
 

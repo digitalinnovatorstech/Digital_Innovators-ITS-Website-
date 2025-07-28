@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import "@/components/styles/menustyles.css";
+import "../components/styles/menustyles.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";

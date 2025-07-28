@@ -6,7 +6,7 @@ import BackgroundImage from "../../../public/assets/industries/image1.svg";
 import { useRouter } from "next/navigation";
 
 import Link from "next/link";
-import { useGetBlogs } from "@/app/insights/hooks/crudAPIS";
+import { useGetBlogs } from "../../app/insights/hooks/crudAPIS";
 import PrimaryButton from "./primarybutton";
 
 const StayUpdates = () => {
