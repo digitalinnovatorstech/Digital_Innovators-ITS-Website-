@@ -1,0 +1,212 @@
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+/* //primary color */
+@theme {
+  --color-primary: #ff8c00;
+  --color-secondary: #000000;
+  --color-tertiary: #2c2c2c;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@font-face {
+  font-family: "exotc350bdbtbold";
+  src: url("/fonts/exotc350-bd-bt/exotc350bdbtbold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer components {
+  .card-container {
+    @apply flex flex-col justify-between gap-y-4 p-10 pl-5 border border-white rounded-lg text-white h-full;
+  }
+  .bird_header {
+    @apply relative flex items-center justify-start;
+  }
+  .bird_subheader {
+    @apply text-xl font-normal  mt-15  text-secondary;
+  }
+  .container-card {
+    @apply font-sans mx-auto md:py-40  p-4;
+  }
+  .image {
+    @apply mt-15 absolute xl:right-215 xl:-top-15 right-40 lg:right-140;
+  }
+  .attachbutton {
+    @apply border border-black w-52 rounded p-2 flex justify-between items-center;
+  }
+  .card-grid {
+    @apply grid gap-6 mt-10  sm:grid-cols-2 lg:grid-cols-3 m-5 md:m-0;
+  }
+
+  /* Project Talk Section */
+  .flex-column-space {
+    @apply flex flex-col items-start space-y-2;
+  }
+
+  .input-border {
+    @apply sm:ml-4 flex-1 border-dotted border-2 focus:outline-none;
+  }
+
+  .flex-layout {
+    @apply flex items-center text-[15px] font-bold gap-2 sm:gap-4 xl:gap-6;
+  }
+
+  .input-field {
+    @apply flex-1 border-b border-dotted border-black focus:outline-none py-1 leading-none align-middle;
+  }
+
+  .label-text {
+    @apply md:text-[15px] xl:text-[20px] text-[10px] font-bold leading-none translate-y-[2px] mt-3;
+  }
+
+  .margin-responsive {
+    @apply mb-0;
+  }
+
+  .help-text {
+    @apply text-black flex flex-col md:flex-row w-full mt-12 mb-28;
+  }
+  .title {
+    @apply mb-3 mt-3 text-black text-sm font-bold;
+  }
+  /* //careers */
+  .card-description {
+    @apply font-semibold text-xl md:text-lg leading-snug break-words;
+  }
+  .card-header {
+    @apply font-light md:text-lg text-lg;
+  }
+
+  .contact-image-container {
+    @apply flex justify-end;
+  }
+
+  .careersimage {
+    @apply h-[400px] rounded col-span-3 overflow-hidden;
+  }
+  .jobcontainer {
+    @apply flex border rounded mb-4 cursor-pointer justify-between items-start p-3;
+  }
+
+  .individual_job {
+    @apply list-disc pl-5;
+  }
+  .job_heading {
+    @apply text-2xl   font-semibold text-black mb-4;
+  }
+  .contact_head {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-52;
+  }
+
+  /* NEW: Contact Page Style */
+  .contact-page {
+    font-family: "exotc350bdbtbold";
+    font-size: 40px;
+    margin-top: auto;
+  }
+}
+.applybutton {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  padding: 0.2rem !important;
+  border: 1px solid #ff8c00 !important;
+  border-radius: 9999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.1rem !important;
+  cursor: pointer !important;
+
+  margin: 0 auto !important;
+  line-height: 1 !important; /* Keeps the icon and text aligned neatly */
+}
+
+.sendbutton {
+  width: 6rem;
+  max-width: 100%;
+
+  border: 1px solid #ff8c00 !important;
+  color: #ff8c00 !important;
+
+  cursor: pointer;
+}
+
+.underline-image {
+  display: inline-block;
+  width: 160px;
+
+  height: 10px;
+  margin-top: 4px;
+}
+.custom-divider {
+  border-top: 1px solid #000;
+  width: 100%;
+  /* margin: 3px 0;  */
+}
+.jobtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color, #ff8c00);
+  font-weight: 600;
+}
+
+.container_card {
+  font-family: "Poppins", sans-serif;
+  max-width: 1030px;
+  margin: 0 auto;
+  color: white;
+}
+
+.container_card {
+  font-family: "Poppins", sans-serif;
+  max-width: 1030px;
+  margin: 0 auto;
+  color: white;
+}
+
+.contact-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 20px;
+  color: #000;
+  margin-top: 3rem;
+}
+
+.font {
+  font-family: "exotc350bdbtbold";
+}
+
+.sendbutton {
+  width: 6rem;
+
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 9999px;
+  padding: 0.25rem 1.5rem;
+
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.sendbutton:hover {
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+
+/* Medium screen (sm:w-auto equivalent) */
+@media (min-width: 640px) {
+  .sendbutton {
+    width: auto;
+  }
+}
