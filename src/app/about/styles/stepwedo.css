@@ -1,0 +1,122 @@
+/* CSS Animations for StepsWeDO component */
+
+/* Animation for header */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for step 1 */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for step 2 */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for step 3 */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for icons */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
+.animate-header {
+  opacity: 0;
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-step1 {
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-step2 {
+  opacity: 0;
+  animation: slideInUp 1s ease-out forwards;
+}
+
+.animate-step3 {
+  opacity: 0;
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-icon {
+  opacity: 0;
+  animation: zoomIn 0.8s ease-out forwards, pulse 3s ease-in-out infinite 0.8s;
+}
+
+/* Intersection Observer classes - elements will be animated when they come into view */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+}
+
+/* Delay animations to create a sequence effect */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}

@@ -1,0 +1,113 @@
+/* Base styles for tech bubbles */
+.tech-bubble {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: 0;
+  will-change: transform, opacity;
+  position: absolute;
+}
+
+/* Animation for falling and bouncing effect */
+.tech-bubble.animate-fall {
+  animation-name: fallAndBounce;
+  animation-duration: 2s;
+  animation-delay: var(--animation-delay);
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Separate animation for floating after landing */
+.tech-bubble.animate-fall::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: floatAndRotate 3s ease-in-out infinite alternate;
+  animation-delay: calc(var(--animation-delay) + 2s);
+}
+
+/* Keyframes for falling and bouncing */
+@keyframes fallAndBounce {
+  0% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% - 100vh))
+      scale(var(--scale)) rotate(var(--rotation));
+    opacity: 1;
+  }
+  60% {
+    transform: translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y) + var(--bounce-height))
+      )
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+  75% {
+    transform: translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y) - calc(var(--bounce-height) * 0.5))
+      )
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+  85% {
+    transform: translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y) + calc(var(--bounce-height) * 0.25))
+      )
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+  92% {
+    transform: translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y) - calc(var(--bounce-height) * 0.125))
+      )
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+  100% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(var(--scale)) rotate(var(--rotation));
+    opacity: 1;
+  }
+}
+
+/* After landing, apply gentle floating animation */
+.tech-bubble.animate-fall:not([style*="animation-play-state: paused"]) {
+  animation-name: fallAndBounce, floatAndRotate;
+  animation-duration: 2s, 3s;
+  animation-delay: var(--animation-delay), calc(2s + var(--animation-delay));
+  animation-fill-mode: forwards, forwards;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-direction: normal, alternate;
+}
+
+/* Keyframes for floating and rotating after landing */
+@keyframes floatAndRotate {
+  0% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+  50% {
+    transform: translate(
+        calc(-50% + var(--x)),
+        calc(-50% + var(--y) + var(--float-distance))
+      )
+      scale(var(--scale)) rotate(calc(var(--rotation) + var(--rotation-amount)));
+  }
+  100% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+      scale(var(--scale)) rotate(var(--rotation));
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .tech-bubble {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+
+  .tech-bubble .relative {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}

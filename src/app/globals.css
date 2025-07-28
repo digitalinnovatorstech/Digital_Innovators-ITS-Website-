@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@font-face {
+  font-family: "exotc350bdbtbold";
+  src: url("/fonts/exotc350-bd-bt/exotc350bdbtbold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.exotfont {
+  font-family: "exotc350bdbtbold";
+  font-size: 60px;
+  margin-top: auto;
+}
+
+.exotfont1 {
+  font-family: "exotc350bdbtbold";
+  font-size: 50px;
+  margin-top: auto;
+}
+/* Decrease font size on smaller screens */
+@media (max-width: 640px) {
+  .exotfont {
+    font-size: 40px;
+  }
+  .exotfont1 {
+    font-size: 30px;
+  }
+}
+.font {
+  font-family: "exotc350bdbtbold";
+}
+/* //primary color */
+@theme {
+  --color-primary: #ff8c00;
+  --color-secondary: #000000;
+  --color-tertiary: #2c2c2c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Poppins";
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #787878;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #787878;
+}
+/* Base styles for all screen sizes */
+.header-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  box-sizing: border-box;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width on small screens */
+  max-width: 1200px; /* Prevent it from getting too wide */
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%; /* Full width on small screens */
+  max-width: 1200px; /* Prevent from getting too wide */
+}
+
+.container1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px; /* Prevent from getting too wide */
+}
+
+/* Medium screens and up */
+@media (min-width: 640px) {
+  .header-container {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container1 {
+    width: 75%;
+  }
+}
+
+/* For medium screens (md) and larger */
+@media (min-width: 768px) {
+  .container1 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.custom-button {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 1.5rem;
+
+  /* Medium screen (md) adjustments */
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.contact-title-wrapper {
+  display: flex;
+  /* align-items: center; */
+}
+
+.contact-title {
+  font-size: 1px;
+  color: #2c2c2c;
+  /* margin-top: 3rem; */
+}
+
+@layer components {
+  .footer_container {
+    @apply flex flex-col gap-6 items-center md:items-start mt-4;
+  }
+  .footer_header {
+    @apply text-white font-semibold lg:text-3xl text-2xl md:text-4xl text-center md:text-start;
+  }
+  .footer_para {
+    @apply text-white font-light text-lg text-center md:text-start;
+  }
+  .lets_connect {
+    @apply text-white text-lg border-white border p-3 text-center rounded-full flex items-center justify-center;
+  }
+  .nav_link {
+    @apply w-full grid grid-cols-2 md:grid-cols-4  p-12 md:p-0 md:justify-items-center  md:gap-x-10 md:gap-10 gap-y-5 md:gap-y-0;
+  }
+  .nav_link_item {
+    @apply text-secondary xl:text-xl lg:text-sm font-medium hover:text-primary text-start md:text-center;
+  }
+  .footer_bottom {
+    @apply text-xs text-black flex items-center justify-center gap-2 whitespace-nowrap;
+  }
+  .footer-content {
+    @apply mt-4 space-y-5 text-center;
+  }
+}
+
+.flying_bird {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}

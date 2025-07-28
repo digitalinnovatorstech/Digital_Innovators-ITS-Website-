@@ -1,0 +1,85 @@
+/* ClientsSection CSS - Pure CSS animations */
+
+/* Character animations */
+.char {
+  display: inline-block;
+}
+
+/* First line animation (from left) */
+.first-line-char {
+  transform: translateX(-60px);
+  opacity: 0;
+  animation: slideInFromLeft 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+    var(--delay);
+}
+
+/* Second line animation (from right) */
+.second-line-char {
+  transform: translateX(60px);
+  opacity: 0;
+  animation: slideInFromRight 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+    var(--delay);
+  animation-delay: calc(0.3s + var(--delay));
+}
+
+/* Orange characters styling */
+.orange-char {
+  color: #f97316; /* Tailwind orange-500 color */
+}
+
+/* Make sure the orange color is preserved */
+.text-orange-500 .char {
+  color: #f97316;
+}
+
+/* Slide animations */
+@keyframes slideInFromLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Counter animation styles */
+.counter-initial {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: none;
+}
+
+.counter-animate {
+  animation: counterScaleUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      forwards,
+    counterScaleDown 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.8s,
+    counterPulse 0.5s ease-in-out 2.3s;
+}
+
+@keyframes counterScaleUp {
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes counterScaleDown {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes counterPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
