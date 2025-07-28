@@ -5,7 +5,7 @@ import Link from "next/link";
 import JobImage from "../../../../../public/assets/contact/design.svg";
 import Orangebutton from "../../../../../public/assets/orangebutton.svg";
 import JobApplicationForm from "../components/jobform";
-import "@/app/contact/styles/contact.css";
+import "../../../contact/styles/contact.css";
 
 import { useState, useEffect } from "react";
 import parse from 'html-react-parser';

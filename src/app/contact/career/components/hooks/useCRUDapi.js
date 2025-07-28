@@ -1,5 +1,5 @@
-import instance from "@/services/axiosinstance";
-import { showToast } from "@/services/toastmessage";
+import instance from "../../../../../services/axiosinstance";
+import { showToast } from "../../../../../services/toastmessage";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 

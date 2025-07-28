@@ -1,5 +1,5 @@
 'use client';
-import "@/app/clients/styles/clients.css";
+import "../../clients/styles/clients.css"; // Assuming you have a CSS file for styles
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
 import ClientImage from "../../../../public/assets/clients/clientsimg.svg";

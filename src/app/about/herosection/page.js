@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import "@/app/about/styles/about.css";
+import "../styles/about.css"; // Assuming you have a CSS file for styles
 import Lineimage from "../../../../public/assets/about/lineimage.svg";
 import Mission from "../../../../public/assets/about/mission.svg";
 import Target from "../../../../public/assets/about/target.svg";
