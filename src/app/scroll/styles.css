@@ -1,0 +1,84 @@
+.sticky-parent {
+  height: 600vh; /* Adjust this based on number of sections */
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.horizontal {
+  display: flex;
+  height: 100vh;
+}
+
+.dim {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.intro-section,
+.outro-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-section p {
+  font-size: 3em;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+.writing-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(
+    180deg
+  ); /* optional: flip the direction to read bottom to top */
+}
+/* Add this to your existing contact.css file */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.bounce-icon {
+  animation: bounce 3s ease-in-out infinite;
+  pointer-events: none;
+}

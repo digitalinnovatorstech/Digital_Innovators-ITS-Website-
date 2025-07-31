@@ -1,0 +1,28 @@
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* //primary color */
+@theme {
+    --color-primary: #ff8c00;
+    --color-secondary: #000000;
+    --color-tertiary: #2C2C2C;
+  }
+
+@layer components {
+    .clients_body{
+        @apply flex flex-col items-center justify-center text-center h-screen  pb-40
+    }
+    .images_container{
+        @apply grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 my-18
+    }
+}
