@@ -4,31 +4,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import PrimaryButton from "./primarybutton";
 import Leftarrow from "../../../public/assets/orangebuttonleft.svg";
 import Rightarrow from "../../../public/assets/orangebutton.svg";
-
+ 
 import Image from "next/image";
-
+ 
 export default function Customer() {
   const testimonials = [
     {
       icon: "/assets/companyname/image_1.svg",
-      company: "Company Name 1",
-      text: "We have built a strong equation with Innovators\ntech solutions and continuously work with them\nfor all our requirements.",
-      name: "Name 1",
-      position: "Position 1",
+      company: "Cryovault",
+      text: "Highly recommend! \nThey listened to my needs and\n delivered exactly what I was looking for.",
+     
     },
     {
       icon: "/assets/companyname/image_2.svg",
-      company: "Company Name 2",
-      text: "We have built a strong equation with Innovators\ntech solutions and continuously work with them\nfor all our requirements.",
-      name: "Name 2",
-      position: "Position 2",
+      company: "Nilofur",
+      text: "Reliable and efficient.\n I will definitely be returning \nfor future projects.",
+     
     },
     {
       icon: "/assets/companyname/image_3.svg",
-      company: "Company Name 3",
-      text: "We have built a strong equation with Innovators\ntech solutions and continuously work with them\nfor all our requirements.",
-      name: "Name 3",
-      position: "Position 3",
+      company: "Best news hub",
+      text: "A fantastic experience from start to finish.\n The quality of work was top-notch.",
+     
     },
     {
       icon: "/assets/companyname/image_1.svg",
@@ -38,21 +35,21 @@ export default function Customer() {
       position: "Position 4",
     },
   ];
-
+ 
   const [ currentIndex, setCurrentIndex ] = useState(0);
-
+ 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 >= testimonials.length ? 0 : prevIndex + 1
     );
   };
-
+ 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
-
+ 
   const displayTestimonials = () => {
     const visibleTestimonials = [];
     for (let i = 0; i < 3; i++) {
@@ -61,16 +58,16 @@ export default function Customer() {
     }
     return visibleTestimonials;
   };
-
+ 
   const testimonialVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -20 },
   };
-
+ 
   return (
     <>
-      <div className="bg-[url('/assets/map.svg')] md:h-screen flex items-center justify-center ">
+      <div className="bg-[url('/assets/map.svg')] md:min-h-screen py-20 flex items-center justify-center">
         <div className="max-w-8xl w-full mx-auto">
           {/* Desktop View */}
           <div className="container hidden md:block">
@@ -103,16 +100,11 @@ export default function Customer() {
                   <p className="testimonial-para">
                     {displayTestimonials()[ 0 ].text}
                   </p>
-                  <p className="testimonal_name">
-                    {displayTestimonials()[ 0 ].name}
-                  </p>
-                  <p className="text-sm mt-4">
-                    {displayTestimonials()[ 0 ].position}
-                  </p>
+                  
                 </motion.div>
               </AnimatePresence>
             </div>
-
+ 
             <div className="flex justify-center mt-1 w-full">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -131,16 +123,11 @@ export default function Customer() {
                   <p className="testimonial-para">
                     {displayTestimonials()[ 1 ].text}
                   </p>
-                  <p className="testimonal_name">
-                    {displayTestimonials()[ 1 ].name}
-                  </p>
-                  <p className="text-sm mt-4">
-                    {displayTestimonials()[ 1 ].position}
-                  </p>
+                  
                 </motion.div>
               </AnimatePresence>
             </div>
-
+ 
             <div className="flex justify-end mt-1 w-full">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -159,34 +146,14 @@ export default function Customer() {
                   <p className="testimonial-para">
                     {displayTestimonials()[ 2 ].text}
                   </p>
-                  <p className="testimonal_name">
-                    {displayTestimonials()[ 2 ].name}
-                  </p>
-                  <p className="text-sm mt-4">
-                    {displayTestimonials()[ 2 ].position}
-                  </p>
+                  
                 </motion.div>
               </AnimatePresence>
             </div>
-
-            <div className="flex flex-col justify-end relative items-end gap-4 -mt-15">
-              <motion.button
-                onClick={handlePrev}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image src={Leftarrow} alt="left arrow" />
-              </motion.button>
-              <motion.button
-                onClick={handleNext}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image src={Rightarrow} alt="right arrow" />
-              </motion.button>
-            </div>
+ 
+            
           </div>
-
+ 
           {/* Mobile View (1 Testimonial per slide) */}
           <div className="p-6 md:hidden">
             <div className="flex flex-col items-center">
@@ -250,7 +217,8 @@ export default function Customer() {
           </div>
         </div>
       </div>
-
+ 
     </>
   );
 }
+ 
