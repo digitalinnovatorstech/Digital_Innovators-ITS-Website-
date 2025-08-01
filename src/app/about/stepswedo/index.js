@@ -102,7 +102,7 @@ export default function StepsWeDO() {
     <div className="main_container md:h-screen md:flex md:items-center md:justify-center py-20 md:py-0">
       <div className="md:max-w-8xl md:w-full md:mx-auto px-4">
         <div className="container" ref={headerRef}>
-          <div className="process_head md:flex md:justify-between items-start gap-8 mt-4 mb-16">
+          <div className="process_head md:flex md:justify-between items-start gap-8 mt-4 mb-10">
             <div className="flex flex-col space-y-2">
               <Image src={StepsImage} alt="Flowerpot" />
               <div className="flex items-baseline gap-4 text-primary">
